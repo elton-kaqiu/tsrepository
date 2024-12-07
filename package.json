@@ -12,7 +12,18 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write src/**/*.ts",
-    "test": "jest"
+    "test": "jest --config jest.config.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "jest-extended": "^4.0.2",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.20"
+  },
+  "peerDependencies": {
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
@@ -26,5 +37,25 @@
   },
   "resolutions": {
     "glob": "^9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/tsrepository.git"
+  },
+  "keywords": [
+    "typeorm",
+    "repository-pattern",
+    "typescript",
+    "database",
+    "tsrepository"
+  ],
+  "license": "MIT",
+  "author": "Elton Kaqiu <kaqiu96@gmail.com>",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   }
 }
