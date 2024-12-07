@@ -5,6 +5,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
   "files": [
     "dist",
     "src/interfaces",
@@ -14,13 +18,10 @@
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write src/**/*.ts",
-    "test": "jest --config jest.config.js"
+    "test": "jest --config jest.config.ts"
   },
   "dependencies": {
-    "dotenv": "^16.4.7",
-    "jest-extended": "^4.0.2",
     "reflect-metadata": "^0.2.2",
-    "ts-node": "^10.9.2",
     "typeorm": "^0.3.20"
   },
   "peerDependencies": {
@@ -30,10 +31,13 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.1",
+    "dotenv": "^16.4.7",
     "eslint": "^9.16.0",
     "jest": "^29.7.0",
+    "jest-extended": "^4.0.2",
     "prettier": "^3.4.2",
     "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },
@@ -52,12 +56,5 @@
     "tsrepository"
   ],
   "license": "MIT",
-  "author": "Elton Kaqiu <kaqiu96@gmail.com>",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  }
+  "author": "Elton Kaqiu <kaqiu96@gmail.com>"
 }
