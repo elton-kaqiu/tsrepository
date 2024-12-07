@@ -1,18 +1,18 @@
 {
   "name": "tsrepository",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A TypeScript repository pattern library built with TypeORM",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "reflect-metadata": "^0.2.2",
-    "typeorm": "^0.3.20"
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write src/**/*.ts",
+    "test": "jest"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
@@ -25,6 +25,6 @@
     "typescript": "^5.7.2"
   },
   "resolutions": {
-    "glob":"^9.0.0"
+    "glob": "^9.0.0"
   }
 }
