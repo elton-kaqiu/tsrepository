@@ -1,4 +1,3 @@
-import { IReadRepository } from './IReadRepository';
-import { IWriteRepository } from './IWriteRepository';
-import { ITSRepository } from './ITSRepository';
-export { IReadRepository, IWriteRepository, ITSRepository };
+export { IReadRepository } from './IReadRepository.d';
+export { IWriteRepository } from './IWriteRepository.d';
+export { ITSRepository } from './ITSRepository.d';

@@ -1,3 +1,5 @@
+import { FindOptionsWhere } from 'typeorm';
+
 /**
  * Base repository for read operations.
  * Generic implementation for any TypeORM entity.

@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "A TypeScript repository pattern library built with TypeORM",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
   "files": [
-    "dist"
+    "dist",
+    "src/interfaces",
+    "src/repositories"
   ],
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
